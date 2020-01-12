@@ -1,0 +1,32 @@
+{
+  "name": "vvvvvv",
+  "version": "0.1.0",
+  "description": "Module and utilities to deal with VVVVVV's file formats",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "juju2143",
+  "license": "LiLiQ-P-1.1",
+  "bin": {
+    "vvv": "bin/vvv.js"
+  },
+  "dependencies": {
+    "posix-getopt": "^1.2.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juju2143/node-vvvvvv.git"
+  },
+  "keywords": [
+    "vvvvvv"
+  ],
+  "bugs": {
+    "url": "https://github.com/juju2143/node-vvvvvv/issues"
+  },
+  "homepage": "https://github.com/juju2143/node-vvvvvv#readme"
+}
