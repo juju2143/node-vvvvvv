@@ -2,9 +2,11 @@
 
 This is a node package to deal with the custom file formats from Terry Cavanagh's popular game VVVVVV.
 
-## Music
+## Usage
 
-There's a file called `vvvvvvmusic.vvv` in the root of the `data.zip` found in ytour installation of VVVVVV.
+### Music
+
+There's a file called `vvvvvvmusic.vvv` in the root of the `data.zip` found in your installation of VVVVVV.
 
 It's a quite simple file format. From the source code:
 
@@ -62,7 +64,7 @@ fs.readFile("somecustommusic.ogg", (err, data) => {
 
         // once you're done save the pack
         pack.pack((err, buf) => {
-            if(err) throw err.message;
+            if(err) throw err;
             fs.writeFile("newfile.vvv", buf, null, (err) => {
                 if(err) throw err;
                 console.log("writing newfile.vvv");
@@ -99,8 +101,17 @@ $ vvv -x vvvvvvmusic.vvv # extract them
 $ vvv -c newfile.vvv data/music/* # create a new pack
 ```
 
-Note that VVVVVV wants at least exactly these filenames, but there's nothing keeping you from including other files (such as a readme) or reusing the file format for your own thing.
+Note that VVVVVV wants at least exactly these filenames (so the last argument should always be `data/music/*`), but there's nothing keeping you from including other files (such as a readme) or reusing the file format for your own thing. Also note that the `-c` option is going to overwrite your file if it exists, will be corrected in a newer version. Once you have your vvv file made, you can dump it in the root of your `data.zip` either as `vvvvvvmusic.vvv` (overwriting the original, so keep a backup) or `mmmmmm.vvv`, the latter (which was made for FamilyJules' soundtrack which you can buy on SoulEye's website) will give you the option to switch between the original soundtrack and your own.
 
-## Levels
+### Levels
 
 *coming soon*
+
+## Links
+
+- Made by [J. P. "juju2143" Savard](https://toasters.rocks)
+- Made by studying [Terry Cavanagh's and Ethan Lee's](https://github.com/TerryCavanagh/VVVVVV) slightly terrible source code (say what you want but they tried and the end result is real good ;))
+- Licensed under the terms of the Québec Free and Open-Source Licence – Permissive (LiLiQ-P) (for those who care, it's a rather obscure license no one uses but eh, it's OSI-approved)
+- Buy [the metal soundtrack](http://magnuspalsson.com/m) (comes with the original `mmmmmm.vvv`)
+- Throw some money at me on [Patreon](https://patreon.com/juju2143)
+- Have fun!
